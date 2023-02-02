@@ -1,0 +1,84 @@
+real time sort1:
+-random-
+67, 88, 67, 72 ms
+275, 278, 291, 270 ms
+8.661, 8.369, 8.556, 8.326 ms
+-reversed-
+98, 87, 74, 105 ms
+511, 303, 338, 275 ms
+6.727, 6.699, 6.523, 6.471 ms
+-sorted-
+39, 31, 21, 42 ms
+62, 72, 65, 64 ms
+728, 776, 898, 845 ms
+
+sort1 - average
+random: 73, 278, 8.478 ms
+reversed: 91, 356, 6.605 ms
+sorted: 33, 65, 811 ms
+
+Execution Time: O(n²)
+Best Case: Ω(n)
+
+-----------------------------------
+
+real time sort2:
+-random-
+37, 23, 43, 42 ms
+63, 51, 50, 60 ms
+860, 850, 641, 557 ms
+-reversed-
+42, 22, 26, 48 ms
+67, 65, 64, 71 ms
+695, 764, 1.390, 580 ms
+-sorted-
+48, 42, 41, 28 ms
+65, 63, 78, 55 ms
+656, 843, 822, 744 ms
+
+sort2 - average
+random: 36, 56, 727 ms
+reversed: 34, 66, 857 ms
+sorted: 39, 65, 766 ms
+
+Execution Time: O(n log(n))
+Best Case: Ω(n log(n))
+
+-----------------------------------
+
+real time sort3:
+-random-
+52, 75, 81, 80 ms
+216, 200, 172, 200 ms
+3.968, 3.939, 3.981, 3.864 s
+-reversed-
+74, 82, 55, 72 ms
+186, 195, 347, 183 ms
+3.956, 3.873, 3.849, 3.788 ms
+-sorted-
+71, 75, 50, 77 ms
+191, 161, 160, 245 ms
+3.688, 3.687, 3.687, 3.542 ms
+
+sort3 - average
+random: 72, 197, 3.938 ms
+reversed: 70, 227, 2.878 ms
+sorted: 68, 189, 3.651 ms
+
+Execution Time: O(n²)
+Best Case: Ω(n²)
+
+-----------------------------------
+Answers:
+
+sort1 uses: Bubble Sort
+
+How do you know?: É onde há uma maior variação entre o melhor e o pior caso
+
+sort2 uses: Merge Sort
+
+How do you know?: É o com o melhor tempo de execução, tanto no melhor quanto no pior caso e em ambos há um tempo praticamente equivalente de execução
+
+sort3 uses: Selection Sort
+
+How do you know?: Em comparação o melhor e o pior caso são quase iguais e ele demora mais que o sort2
