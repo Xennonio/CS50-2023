@@ -1,0 +1,14 @@
+1
+based on the descriptions of each aura specified by spotify in:
+https://newsroom.spotify.com/2021-12-01/learn-more-about-the-audio-aura-in-your-spotify-2021-wrapped-with-aura-reader-mystic-michaela/
+and considering that:
+"SELECT AVG(energy) AS average_energy FROM songs;" returns 0.65906, or approximately 65%
+"SELECT AVG(valence) AS average_valence FROM songs;" returns 0.484443, or approximately 48%
+"SELECT AVG(danceability) AS average_danceability FROM songs;" returns 0.71646, or approximately 71%
+it is possible to conclude that the listener, although its much valence, likes energetic and danceable musics
+therefore a good characterization of aura would be Purple
+
+2
+I see two plausible reasons, if the listener is an assiduous listener, he will probably listen to much more than
+100 different songs during a year, so increasing the number of songs analyzed can be interesting. Also, many
+listeners play them at random, often skipping between them, so considering the listening time is also important.
