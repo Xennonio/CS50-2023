@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+      // Run script once DOM is loaded
+      document.addEventListener('DOMContentLoaded', main)
+
+      function main()
+      {
+        // Part 1
+
+        // When correct answear is clicked, change color to green
+        let correct = document.querySelector('.correct');
+        correct.addEventListener('click', part1_event);
+
+        // When any incorrect answear is clicked, change color to red
+        let incorrects = document.querySelectorAll('.incorrect');
+        for(let i = 0; i < incorrects.length; i++)
+        {
+          incorrects[i].addEventListener('click', function()
+          {
+            incorrects[i].style.backgroundColor = 'red';
+            document.querySelector('#feedback1').innerHTML = 'Oh, wrong answer, try again';
+          });
+        }
+
+        function part1_event()
+        {
+          correct.style.backgroundColor = 'green';
+          document.querySelector('#feedback1').innerHTML = 'Congratulations, you got it right!!';
+        }
+
+        // Part 2
+
+        // Check free response submission
+        document.querySelector('#check').addEventListener('click', part2_event)
+
+        function part2_event()
+        {
+          let input = document.querySelector('input');
+          if(input.value.toLowerCase() == 'world wide web')
+          {
+            input.style.backgroundColor = 'green';
+            document.querySelector('#feedback2').innerHTML = 'Congratulations, you got it right!!';
+          }
+          else
+          {
+            input.style.backgroundColor = 'red';
+            document.querySelector('#feedback2').innerHTML = 'Oh, wrong answer, try again';
+          }
+        }
+      }
+    </script>
+  </head>
+    <body>
+      <div class="header">
+        <h1>Trivia!</h1>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <h2>Part 1: Multiple Choice </h2>
+          <hr>
+          <h3>How many languages are written from right to left?</h3>
+          <!-- Answear: 12 -->
+          <button type="button" class="incorrect">8</button>
+          <button type="button" class="incorrect">9</button>
+          <button type="button" class="incorrect">10</button>
+          <button type="button" class="incorrect">11</button>
+          <button type="button" class="correct">12</button>
+          <button type="button" class="incorrect">13</button>
+
+          <p id="feedback1"></p>
+
+        </div>
+
+        <div class="section">
+          <h2>Part 2: Free Response</h2>
+          <hr>
+          <h3>What does “www” stand for in a website browser?</h3>
+          <!-- Answear: World Wide Web -->
+            <input type="text">
+            <input type="submit" id="check" value="Check Answear">
+
+            <p id="feedback2"></p>
+        </div>
+      </div>
+    </body>
+</html>
